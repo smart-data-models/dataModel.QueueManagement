@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+# dataModel.QueueManagement
 
-You can use the [editor on GitHub](https://github.com/smart-data-models/dataModel.QueueManagement/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### List of data models
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The following entity types are available:
+- [QueueMonitor](https://github.com/smart-data-models/dataModel.QueueManagement/blob/master/QueueMonitor/README.md). An office counter queue system on a daily run. First Version from synchronicity project
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+No public contributors currently.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/smart-data-models/dataModel.QueueManagement/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Contribution
+You can raise an [issue](https://github.com/smart-data-models/dataModel.QueueManagement/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.QueueManagement/pulls) on existing data models
