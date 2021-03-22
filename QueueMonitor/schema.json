@@ -34,7 +34,7 @@
         },
         "serviceId": {
           "type": "string",
-          "description": "Property. id of the service provided at the counter. The same service could be provided by many offices. Model:'https://schema.org/Text'"
+          "description": "Property. Id of the service provided at the counter. The same service could be provided by many offices. Model:'https://schema.org/Text'"
         },
         "serviceStatus": {
           "type": "string",
@@ -43,7 +43,7 @@
             "Open",
             "Suspended"
           ],
-          "description": "Property. status of the service at timestamp time. Enum:'Closed, Open, Suspended'"
+          "description": "Property. Status of the service at timestamp time. Enum:'Closed, Open, Suspended'"
         },
         "serviceStatusNote": {
           "type": "string",
@@ -76,11 +76,11 @@
         },
         "ticketServedLabel": {
           "type": "string",
-          "description": "Property. Unique identifier from the source data set. Model:'https://schema.org/Text'"
+          "description": "Property. Identifier (unique) from the source data set. Model:'https://schema.org/Text'"
         },
         "ticketsToServe": {
           "type": "integer",
-          "description": "Property. tickets left to serve as ticketIssued minus lastTicketServed. Model:'https://schema.org/Text'"
+          "description": "Property. Tickets left to serve as ticketIssued minus lastTicketServed. Model:'https://schema.org/Text'"
         }
       }
     }
