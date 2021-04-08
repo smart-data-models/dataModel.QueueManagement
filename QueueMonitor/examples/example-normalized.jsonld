@@ -63,8 +63,8 @@
     "type": "Property",
     "value": {
       "streetAddress": "Plaza de la Catedrla s/n",
-      "addressLocality": "Le\u00f3n",
-      "addressRegion": "Castilla y Le\u00f3n",
+      "addressLocality": "Leon",
+      "addressRegion": "Castilla y Leon",
       "addressCountry": "Spain",
       "postalCode": "24001",
       "postOfficeBoxNumber": "",
@@ -132,6 +132,6 @@
     "value": 12
   },
   "@context": [
-    "https://smart-data-models.github.io/data-models/context.jsonld"
+    "https://smartdatamodels.org/context.jsonld"
   ]
 }

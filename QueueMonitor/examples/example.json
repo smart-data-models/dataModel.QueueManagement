@@ -1,14 +1,8 @@
 {
   "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",
   "type": "QueueMonitor",
-  "dateCreated": {
-    "@type": "DateTime",
-    "@value": "2021-03-22T11:10:04Z"
-  },
-  "dateModified": {
-    "@type": "DateTime",
-    "@value": "2021-03-22T11:10:05Z"
-  },
+  "dateCreated": "2021-03-22T11:10:04Z",
+  "dateModified": "2021-03-22T11:10:05Z",
   "source": "",
   "name": "Queue system of the tourist attraction of Leon Cathedral",
   "alternateName": "Cathedral queue",
@@ -30,9 +24,9 @@
     ]
   },
   "address": {
-    "streetAddress": "Plaza de la Catedrla s/n",
+    "streetAddress": "Plaza de la Catedral s/n",
     "addressLocality": "León",
-    "addressRegion": "Castilla y León",
+    "addressRegion": "Castilla y Leon",
     "addressCountry": "Spain",
     "postalCode": "24001",
     "postOfficeBoxNumber": "",
@@ -53,6 +47,5 @@
   "ticketServed": 45,
   "ticketServedLabel": "C-45",
   "ticketsToServe": 12
-
 }
 

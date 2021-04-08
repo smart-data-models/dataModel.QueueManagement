@@ -2,55 +2,55 @@
   "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",
   "type": "QueueMonitor",
   "dateCreated": {
-    "type": "Property",
+    "type": "DateTime",
     "value": {
       "@type": "DateTime",
       "@value": "2021-03-22T11:10:04Z"
     }
   },
   "dateModified": {
-    "type": "Property",
+    "type": "DateTime",
     "value": {
       "@type": "DateTime",
       "@value": "2021-03-22T11:10:05Z"
     }
   },
   "source": {
-    "type": "Property",
+    "type": "Text",
     "value": ""
   },
   "name": {
-    "type": "Property",
+    "type": "Text",
     "value": "Queue system of the tourist attraction of Leon Cathedral"
   },
   "alternateName": {
-    "type": "Property",
+    "type": "Text",
     "value": "Cathedral queue"
   },
   "description": {
-    "type": "Property",
+    "type": "Text",
     "value": "Queue system of the tourist attraction of Leon Cathedral for allowing a limited visitors inside the building"
   },
   "dataProvider": {
-    "type": "Property",
+    "type": "Text",
     "value": ""
   },
   "owner": {
-    "type": "Property",
+    "type": "Text",
     "value": [
       "urn:ngsi-ld:QueueMonitor:items:TLDV:47467690",
       "urn:ngsi-ld:QueueMonitor:items:JTAO:46330396"
     ]
   },
   "seeAlso": {
-    "type": "Property",
+    "type": "Text",
     "value": [
       "urn:ngsi-ld:QueueMonitor:items:SHMV:05050086",
       "urn:ngsi-ld:QueueMonitor:items:QQJP:06476874"
     ]
   },
   "location": {
-    "type": "Property",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -60,7 +60,7 @@
     }
   },
   "address": {
-    "type": "Property",
+    "type": "StructuredValue",
     "value": {
       "streetAddress": "Plaza de la Catedrla s/n",
       "addressLocality": "León",
@@ -72,64 +72,63 @@
     }
   },
   "areaServed": {
-    "type": "Property",
+    "type": "Text",
     "value": "City Center"
   },
   "localId": {
-    "type": "Property",
+    "type": "Text",
     "value": "system-1"
   },
   "officeName": {
-    "type": "Property",
+    "type": "Text",
     "value": "Tourist Office"
   },
   "serviceName": {
-    "type": "Property",
+    "type": "Text",
     "value": "Visit reservations."
   },
   "serviceId": {
-    "type": "Property",
+    "type": "Text",
     "value": "Cathedral-reservations-visit-1"
   },
   "serviceStatus": {
-    "type": "Property",
+    "type": "Text",
     "value": "Open"
   },
   "serviceStatusNote": {
-    "type": "Property",
+    "type": "Text",
     "value": ""
   },
   "scheduleTime": {
-    "type": "Property",
+    "type": "DateTime",
     "value": "2021-02-21T12:47:04Z"
   },
   "queueLine": {
-    "type": "Property",
+    "type": "Text",
     "value": "Groups line."
   },
   "linePriority": {
-    "type": "Property",
+    "type": "Number",
     "value": 1
   },
   "lastTicketIssued": {
-    "type": "Property",
+    "type": "Number",
     "value": 33
   },
   "lastTicketIssuedLabel": {
-    "type": "Property",
+    "type": "Text",
     "value": "C-33"
   },
   "ticketServed": {
-    "type": "Property",
+    "type": "Number",
     "value": 45
   },
   "ticketServedLabel": {
-    "type": "Property",
+    "type": "Text",
     "value": "C-45"
   },
   "ticketsToServe": {
-    "type": "Property",
+    "type": "Number",
     "value": 12
   }
 }
-
