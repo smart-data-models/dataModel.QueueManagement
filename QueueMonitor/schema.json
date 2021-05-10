@@ -1,6 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://gitlab.com/synchronicity-iot/synchronicity-data-models/raw/master/QueueMonitor/schema.json",
+    "$id": "https://smart-data-models/dataModel.QueueManagement/QueueMonitor/schema.json",
+    "$schemaVersion": "0.0.1",
     "title": "Smart Data Models - QueueMonitor schema",
     "description": "An office counter queue system on a daily run. First Version from synchronicity project",
     "type": "object",
@@ -88,6 +89,5 @@
     "required": [
         "id",
         "type"
-    ],
-    "$schemaVersion": "0.0.1"
+    ]
 }
