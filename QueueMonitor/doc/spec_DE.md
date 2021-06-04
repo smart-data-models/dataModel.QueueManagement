@@ -1,11 +1,12 @@
 Entität: QueueMonitor  
 =====================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.QueueManagement/blob/master/QueueMonitor/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Ein Büroschalter-Warteschlangensystem im täglichen Betrieb. Erste Version aus dem Synchronisationsprojekt**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `lastTicketIssued`: Letzte ausgegebene Ticketnummer oder diese Zeile an der Schalterwarteschlange  - `lastTicketIssuedLabel`: Etikett, das dem lastTicketIssued zugeordnet ist  - `linePriority`: Prioritätsstufe dieser Zeile bei Counter Queue  - `localId`: Eindeutiger Bezeichner aus dem Quelldatensatz.  - `location`:   - `name`: Der Name dieses Elements.  - `officeName`:  Name der Dienstleistung, die am Schalter erbracht wird  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `queueLine`: Beschreibung über die Warteschlangenlinie, die dem Dienst zugeordnet ist. Ein und derselbe Bürozähler kann verschiedene Warteschlangenlinien mit unterschiedlichen Prioritätsstufen bedienen  - `scheduleTime`: Geplante Arbeitszeit des Dienstes  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `serviceId`: ID der am Schalter erbrachten Dienstleistung. Derselbe Dienst könnte von vielen Büros erbracht werden  - `serviceName`: Eindeutiger Bezeichner aus dem Quelldatensatz  - `serviceStatus`: Status des Dienstes zum Zeitpunkt des Zeitstempels. Enum:'Closed, Open, Suspended'  - `serviceStatusNote`: Zusätzlicher Hinweis zum Servicestatus  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `ticketServed`: Ticketnummer, die derzeit von dieser Linie an der Schalterwarteschlange bedient wird  - `ticketServedLabel`: Eindeutiger Bezeichner aus dem Quelldatensatz  - `ticketsToServe`: noch zu bedienende Tickets als ticketIssued minus lastTicketServed  - `type`: NGSI Entity-Typ. Es muss QueueMonitor sein.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `lastTicketIssued`: Letzte ausgegebene Ticketnummer oder diese Zeile an der Schalterwarteschlange  - `lastTicketIssuedLabel`: Etikett, das dem lastTicketIssued zugeordnet ist  - `linePriority`: Prioritätsstufe dieser Zeile bei Counter Queue  - `localId`: Eindeutiger Bezeichner aus dem Quelldatensatz.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `officeName`:  Name der Dienstleistung, die am Schalter erbracht wird  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `queueLine`: Beschreibung über die Warteschlangenlinie, die dem Dienst zugeordnet ist. Ein und derselbe Bürozähler kann verschiedene Warteschlangenlinien mit unterschiedlichen Prioritätsstufen bedienen  - `scheduleTime`: Geplante Arbeitszeit des Dienstes  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `serviceId`: Id der Dienstleistung, die am Schalter erbracht wird. Derselbe Dienst könnte von vielen Büros erbracht werden  - `serviceName`: Eindeutiger Bezeichner aus dem Quelldatensatz  - `serviceStatus`: Status des Dienstes zum Zeitpunkt des Zeitstempels. Enum:'Closed, Open, Suspended'  - `serviceStatusNote`: Zusätzlicher Hinweis zum Servicestatus  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `ticketServed`: Ticketnummer, die derzeit von dieser Linie an der Schalterwarteschlange bedient wird  - `ticketServedLabel`: Bezeichner (eindeutig) aus dem Quelldatensatz  - `ticketsToServe`: Verbleibende Tickets als ticketIssued minus lastTicketServed  - `type`: NGSI Entity-Typ. Es muss QueueMonitor sein.    
 Erforderliche Eigenschaften  
 - `id`  - `type`    
 Datenmodell aus dem Synchronizitätsprojekt  
@@ -28,14 +29,11 @@ QueueMonitor:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -96,10 +94,10 @@ QueueMonitor:
       description: 'Unique identifier from the source data set.'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -119,7 +117,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -142,7 +141,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -167,7 +167,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -189,7 +190,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -214,7 +216,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -241,7 +244,7 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -271,15 +274,15 @@ QueueMonitor:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
           type: string    
       type: Property    
     serviceId:    
-      description: 'id of the service provided at the counter. The same service could be provided by many offices'    
+      description: 'Id of the service provided at the counter. The same service could be provided by many offices'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -289,7 +292,7 @@ QueueMonitor:
       x-ngsi:    
         model: https://schema.org/Text    
     serviceStatus:    
-      description: 'status of the service at timestamp time. Enum:''Closed, Open, Suspended'''    
+      description: 'Status of the service at timestamp time. Enum:''Closed, Open, Suspended'''    
       enum:    
         - Closed    
         - Open    
@@ -309,12 +312,12 @@ QueueMonitor:
       x-ngsi:    
         model: https://schema.org/Integer    
     ticketServedLabel:    
-      description: 'Unique identifier from the source data set'    
+      description: 'Identifier (unique) from the source data set'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
     ticketsToServe:    
-      description: 'tickets left to serve as ticketIssued minus lastTicketServed'    
+      description: 'Tickets left to serve as ticketIssued minus lastTicketServed'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
