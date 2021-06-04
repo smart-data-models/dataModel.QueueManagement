@@ -1,11 +1,12 @@
 Entity: QueueMonitor  
 ====================  
 [Open License](https://github.com/smart-data-models//dataModel.QueueManagement/blob/master/QueueMonitor/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **An office counter queue system on a daily run. First Version from synchronicity project**  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `lastTicketIssued`: Last ticket number issued or this line at Counter Queue  - `lastTicketIssuedLabel`: Label associated to the lastTicketIssued  - `linePriority`: Level of priority of this line at Counter Queue  - `localId`: Unique identifier from the source data set.  - `location`:   - `name`: The name of this item.  - `officeName`:  name of the service provided at the counter  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `queueLine`: Description about the queue line associated to the service. The same office counter could serve different queue lines with different priority level  - `scheduleTime`: Scheduled working time of the service  - `seeAlso`: list of uri pointing to additional resources about the item  - `serviceId`: id of the service provided at the counter. The same service could be provided by many offices  - `serviceName`: Unique identifier from the source data set  - `serviceStatus`: status of the service at timestamp time. Enum:'Closed, Open, Suspended'  - `serviceStatusNote`: Additional note to the service status  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `ticketServed`: Ticket number currently served by this line at Counter Queue  - `ticketServedLabel`: Unique identifier from the source data set  - `ticketsToServe`: tickets left to serve as ticketIssued minus lastTicketServed  - `type`: NGSI Entity type. It has to be QueueMonitor.    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `lastTicketIssued`: Last ticket number issued or this line at Counter Queue  - `lastTicketIssuedLabel`: Label associated to the lastTicketIssued  - `linePriority`: Level of priority of this line at Counter Queue  - `localId`: Unique identifier from the source data set.  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `officeName`:  name of the service provided at the counter  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `queueLine`: Description about the queue line associated to the service. The same office counter could serve different queue lines with different priority level  - `scheduleTime`: Scheduled working time of the service  - `seeAlso`: list of uri pointing to additional resources about the item  - `serviceId`: Id of the service provided at the counter. The same service could be provided by many offices  - `serviceName`: Unique identifier from the source data set  - `serviceStatus`: Status of the service at timestamp time. Enum:'Closed, Open, Suspended'  - `serviceStatusNote`: Additional note to the service status  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `ticketServed`: Ticket number currently served by this line at Counter Queue  - `ticketServedLabel`: Identifier (unique) from the source data set  - `ticketsToServe`: Tickets left to serve as ticketIssued minus lastTicketServed  - `type`: NGSI Entity type. It has to be QueueMonitor.    
 Required properties  
 - `id`  - `type`    
 Data model coming from synchronicity project  
@@ -28,14 +29,11 @@ QueueMonitor:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -96,10 +94,10 @@ QueueMonitor:
       description: 'Unique identifier from the source data set.'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -119,7 +117,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -142,7 +141,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -167,7 +167,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -189,7 +190,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -214,7 +216,8 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -241,7 +244,7 @@ QueueMonitor:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -271,15 +274,15 @@ QueueMonitor:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
           type: string    
       type: Property    
     serviceId:    
-      description: 'id of the service provided at the counter. The same service could be provided by many offices'    
+      description: 'Id of the service provided at the counter. The same service could be provided by many offices'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -289,7 +292,7 @@ QueueMonitor:
       x-ngsi:    
         model: https://schema.org/Text    
     serviceStatus:    
-      description: 'status of the service at timestamp time. Enum:''Closed, Open, Suspended'''    
+      description: 'Status of the service at timestamp time. Enum:''Closed, Open, Suspended'''    
       enum:    
         - Closed    
         - Open    
@@ -309,12 +312,12 @@ QueueMonitor:
       x-ngsi:    
         model: https://schema.org/Integer    
     ticketServedLabel:    
-      description: 'Unique identifier from the source data set'    
+      description: 'Identifier (unique) from the source data set'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
     ticketsToServe:    
-      description: 'tickets left to serve as ticketIssued minus lastTicketServed'    
+      description: 'Tickets left to serve as ticketIssued minus lastTicketServed'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -330,20 +333,14 @@ QueueMonitor:
 ```  
 </details>    
 ## Example payloads    
-#### QueueMonitor NGSI V2 key-values Example    
-Here is an example of a QueueMonitor in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### QueueMonitor NGSI-v2 key-values Example    
+Here is an example of a QueueMonitor in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
   "type": "QueueMonitor",  
-  "dateCreated": {  
-    "@type": "DateTime",  
-    "@value": "2021-03-22T11:10:04Z"  
-  },  
-  "dateModified": {  
-    "@type": "DateTime",  
-    "@value": "2021-03-22T11:10:05Z"  
-  },  
+  "dateCreated": "2021-03-22T11:10:04Z",  
+  "dateModified": "2021-03-22T11:10:05Z",  
   "source": "",  
   "name": "Queue system of the tourist attraction of Leon Cathedral",  
   "alternateName": "Cathedral queue",  
@@ -365,9 +362,9 @@ QueueMonitor:
     ]  
   },  
   "address": {  
-    "streetAddress": "Plaza de la Catedrla s/n",  
+    "streetAddress": "Plaza de la Catedral s/n",  
     "addressLocality": "León",  
-    "addressRegion": "Castilla y León",  
+    "addressRegion": "Castilla y Leon",  
     "addressCountry": "Spain",  
     "postalCode": "24001",  
     "postOfficeBoxNumber": "",  
@@ -390,62 +387,62 @@ QueueMonitor:
   "ticketsToServe": 12  
 }  
 ```  
-#### QueueMonitor NGSI V2 normalized Example    
-Here is an example of a QueueMonitor in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### QueueMonitor NGSI-v2 normalized Example    
+Here is an example of a QueueMonitor in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
   "type": "QueueMonitor",  
   "dateCreated": {  
-    "type": "Property",  
+    "type": "DateTime",  
     "value": {  
       "@type": "DateTime",  
       "@value": "2021-03-22T11:10:04Z"  
     }  
   },  
   "dateModified": {  
-    "type": "Property",  
+    "type": "DateTime",  
     "value": {  
       "@type": "DateTime",  
       "@value": "2021-03-22T11:10:05Z"  
     }  
   },  
   "source": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": ""  
   },  
   "name": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Queue system of the tourist attraction of Leon Cathedral"  
   },  
   "alternateName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Cathedral queue"  
   },  
   "description": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Queue system of the tourist attraction of Leon Cathedral for allowing a limited visitors inside the building"  
   },  
   "dataProvider": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": ""  
   },  
   "owner": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": [  
       "urn:ngsi-ld:QueueMonitor:items:TLDV:47467690",  
       "urn:ngsi-ld:QueueMonitor:items:JTAO:46330396"  
     ]  
   },  
   "seeAlso": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": [  
       "urn:ngsi-ld:QueueMonitor:items:SHMV:05050086",  
       "urn:ngsi-ld:QueueMonitor:items:QQJP:06476874"  
     ]  
   },  
   "location": {  
-    "type": "Property",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
@@ -455,7 +452,7 @@ QueueMonitor:
     }  
   },  
   "address": {  
-    "type": "Property",  
+    "type": "StructuredValue",  
     "value": {  
       "streetAddress": "Plaza de la Catedrla s/n",  
       "addressLocality": "León",  
@@ -467,63 +464,63 @@ QueueMonitor:
     }  
   },  
   "areaServed": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "City Center"  
   },  
   "localId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "system-1"  
   },  
   "officeName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Tourist Office"  
   },  
   "serviceName": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Visit reservations."  
   },  
   "serviceId": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Cathedral-reservations-visit-1"  
   },  
   "serviceStatus": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Open"  
   },  
   "serviceStatusNote": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": ""  
   },  
   "scheduleTime": {  
-    "type": "Property",  
+    "type": "DateTime",  
     "value": "2021-02-21T12:47:04Z"  
   },  
   "queueLine": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "Groups line."  
   },  
   "linePriority": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 1  
   },  
   "lastTicketIssued": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 33  
   },  
   "lastTicketIssuedLabel": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "C-33"  
   },  
   "ticketServed": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 45  
   },  
   "ticketServedLabel": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "C-45"  
   },  
   "ticketsToServe": {  
-    "type": "Property",  
+    "type": "Number",  
     "value": 12  
   }  
 }  
@@ -534,14 +531,8 @@ QueueMonitor:
 {  
   "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
   "type": "QueueMonitor",  
-  "dateCreated": {  
-    "@type": "DateTime",  
-    "@value": "2021-03-22T11:10:04Z"  
-  },  
-  "dateModified": {  
-    "@type": "DateTime",  
-    "@value": "2021-03-22T11:10:05Z"  
-  },  
+  "dateCreated": "2021-03-22T11:10:04Z",  
+  "dateModified": "2021-03-22T11:10:05Z",  
   "source": "",  
   "name": "Queue system of the tourist attraction of Leon Cathedral",  
   "alternateName": "Cathedral queue",  
@@ -563,9 +554,9 @@ QueueMonitor:
     ]  
   },  
   "address": {  
-    "streetAddress": "Plaza de la Catedrla s/n",  
-    "addressLocality": "León",  
-    "addressRegion": "Castilla y León",  
+    "streetAddress": "Plaza de la Catedral s/n",  
+    "addressLocality": "Leon",  
+    "addressRegion": "Castilla y Leon",  
     "addressCountry": "Spain",  
     "postalCode": "24001",  
     "postOfficeBoxNumber": "",  
@@ -587,7 +578,7 @@ QueueMonitor:
   "ticketServedLabel": "C-45",  
   "ticketsToServe": 12,  
   "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
@@ -659,8 +650,8 @@ QueueMonitor:
     "type": "Property",  
     "value": {  
       "streetAddress": "Plaza de la Catedrla s/n",  
-      "addressLocality": "León",  
-      "addressRegion": "Castilla y León",  
+      "addressLocality": "Leon",  
+      "addressRegion": "Castilla y Leon",  
       "addressCountry": "Spain",  
       "postalCode": "24001",  
       "postOfficeBoxNumber": "",  
@@ -728,7 +719,7 @@ QueueMonitor:
     "value": 12  
   },  
   "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
