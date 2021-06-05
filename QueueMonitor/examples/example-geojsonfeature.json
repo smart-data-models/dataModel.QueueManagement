@@ -1,0 +1,63 @@
+{
+  "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      42.605556,
+      -5.57
+    ]
+  },
+  "properties": {
+    "type": "QueueMonitor",
+    "dateCreated": "2021-03-22T11:10:04Z",
+    "dateModified": "2021-03-22T11:10:05Z",
+    "source": "",
+    "name": "Queue system of the tourist attraction of Leon Cathedral",
+    "alternateName": "Cathedral queue",
+    "description": "Queue system of the tourist attraction of Leon Cathedral for allowing a limited visitors inside the building",
+    "dataProvider": "",
+    "owner": [
+      "urn:ngsi-ld:QueueMonitor:items:TLDV:47467690",
+      "urn:ngsi-ld:QueueMonitor:items:JTAO:46330396"
+    ],
+    "seeAlso": [
+      "urn:ngsi-ld:QueueMonitor:items:SHMV:05050086",
+      "urn:ngsi-ld:QueueMonitor:items:QQJP:06476874"
+    ],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        42.605556,
+        -5.57
+      ]
+    },
+    "address": {
+      "streetAddress": "Plaza de la Catedral s/n",
+      "addressLocality": "Leon",
+      "addressRegion": "Castilla y Leon",
+      "addressCountry": "Spain",
+      "postalCode": "24001",
+      "postOfficeBoxNumber": "",
+      "areaServed": "City Center."
+    },
+    "areaServed": "City Center",
+    "localId": "system-1",
+    "officeName": "Tourist Office",
+    "serviceName": "Visit reservations.",
+    "serviceId": "Cathedral-reservations-visit-1",
+    "serviceStatus": "Open",
+    "serviceStatusNote": "",
+    "scheduleTime": "2021-02-21T12:47:04Z",
+    "queueLine": "Groups line.",
+    "linePriority": 1,
+    "lastTicketIssued": 33,
+    "lastTicketIssuedLabel": "C-33",
+    "ticketServed": 45,
+    "ticketServedLabel": "C-45",
+    "ticketsToServe": 12,
+    "@context": [
+      "https://smartdatamodels.org/context.jsonld"
+    ]
+  }
+}
