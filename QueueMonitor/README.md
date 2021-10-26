@@ -6,7 +6,7 @@ Version: 0.0.1
 An office counter queue system on a daily run. First Version from synchronicity project
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.QueueManagement/blob/master/QueueMonitor/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.QueueManagement/master/QueueMonitor/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.QueueManagement/blob/master/QueueMonitor/doc/spec.md)
 
