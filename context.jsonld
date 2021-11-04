@@ -14,6 +14,7 @@
         "localId": "https://smartdatamodels.org/dataModel.QueueManagement/localId",
         "location": "ngsi-ld:location",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "officeName": "https://smartdatamodels.org/dataModel.QueueManagement/officeName",
         "owner": "https://smartdatamodels.org/owner",
         "queueLine": "https://smartdatamodels.org/dataModel.QueueManagement/queueLine",
