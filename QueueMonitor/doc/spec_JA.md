@@ -1,17 +1,32 @@
-エンティティキューモニター（QueueMonitor  
-==========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティQueueMonitor  
+==================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.QueueManagement/blob/master/QueueMonitor/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**オフィスのカウンターでのキューシステム。シンクロニシティプロジェクトからの最初のバージョン**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな説明**A office counter queue system on a daily run.シンクロニシティプロジェクトからのファーストバージョン**。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `lastTicketIssued`: 最後に発券されたチケット番号、またはカウンターキューでのこの列  - `lastTicketIssuedLabel`: 最後に購入したチケットに関連するラベル  - `linePriority`: カウンターキューでのこのラインの優先度  - `localId`: ソースデータセットからのユニークな識別子。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `officeName`: カウンターで提供されるサービス名  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `queueLine`: サービスに関連するキューラインについての説明。同じオフィスのカウンターが、異なる優先度を持つ異なるキューラインにサービスを提供することができます。  - `scheduleTime`: サービスの稼働予定時間  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `serviceId`: 窓口で提供するサービスのID。同じサービスが多くの窓口で提供される可能性がある  - `serviceName`: ソースデータセットからのユニークな識別子  - `serviceStatus`: タイムスタンプ時刻におけるサービスの状態。Enum:'Closed, Open, Suspended' (クローズ、オープン、サスペンド)  - `serviceStatusNote`: サービス状況への追記  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `ticketServed`: カウンターキューでこのラインが現在提供しているチケット番号  - `ticketServedLabel`: ソースデータセットの識別子（ユニーク  - `ticketsToServe`: 残されたチケットは、 ticketIssued から lastTicketServed を引いたものです。  - `type`: NGSI エンティティタイプ。それはQueueMonitorでなければならない。    
-必須項目  
-- `id`  - `type`    
-シンクロニシティプロジェクトのデータモデル  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `lastTicketIssued[integer]`: 最終発券番号またはカウンターでの並び順  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `lastTicketIssuedLabel[string]`: lastTicketIssuedに関連するラベル  . Model: [https://schema.org/Text](https://schema.org/Text)- `linePriority[integer]`: カウンターキューでのこの行の優先度  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `localId[string]`: ソースデータセットからの一意な識別子。  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `officeName[string]`: カウンターサービス名  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `queueLine[string]`: サービスに関連するキューラインに関する説明。同じオフィスカウンターで、異なる優先度のキューラインにサービスを提供することができます。  . Model: [https://schema.org/Text](https://schema.org/Text)- `scheduleTime[string]`: サービス稼働予定時間  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `serviceId[string]`: 窓口で提供されるサービスのID。同じサービスが多くの事業所で提供される可能性がある  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceName[string]`: ソースデータセットからの一意な識別子  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceStatus[string]`: タイムスタンプ時刻におけるサービスの状態。Enum:'Closed, Open, Suspended' （クローズ、オープン、サスペンド  - `serviceStatusNote[string]`: サービス状況についての追記  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `ticketServed[integer]`: カウンターキューでこの回線が現在提供しているチケット番号  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `ticketServedLabel[string]`: ソースデータセットからの識別子(一意)  . Model: [https://schema.org/Text](https://schema.org/Text)- `ticketsToServe[integer]`: ticketIssuedからlastTicketServedを差し引いた残りのチケット数  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entity タイプ。QueueMonitor である必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+シンクロニシティプロジェクトから生まれたデータモデル  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 QueueMonitor:    
@@ -369,11 +384,22 @@ QueueMonitor:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.QueueManagement/blob/master/QueueMonitor/LICENSE.md    
+  x-model-schema: https://smart-data-models/dataModel.QueueManagement/QueueMonitor/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### QueueMonitor NGSI-v2 key-values の例。  
-QueueMonitorをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### QueueMonitor NGSI-v2 key-value の例。  
+以下は、QueueMonitorをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
@@ -426,8 +452,10 @@ QueueMonitor:
   "ticketsToServe": 12  
 }  
 ```  
+</details>  
 #### QueueMonitor NGSI-v2 正規化例  
-正規化されたJSON-LD形式のQueueMonitorの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、QueueMonitorをJSON-LD形式で正規化した例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
@@ -564,202 +592,214 @@ QueueMonitor:
   }  
 }  
 ```  
-#### QueueMonitor NGSI-LDのキーバリューの例。  
-QueueMonitorをkey-valuesとしてJSON-LD形式で表現した例を示します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### QueueMonitor NGSI-LD key-value の例  
+以下は、QueueMonitorをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
-  "type": "QueueMonitor",  
-  "dateCreated": "2021-03-22T11:10:04Z",  
-  "dateModified": "2021-03-22T11:10:05Z",  
-  "source": "",  
-  "name": "Queue system of the tourist attraction of Leon Cathedral",  
-  "alternateName": "Cathedral queue",  
-  "description": "Queue system of the tourist attraction of Leon Cathedral for allowing a limited visitors inside the building",  
-  "dataProvider": "",  
-  "owner": [  
-    "urn:ngsi-ld:QueueMonitor:items:TLDV:47467690",  
-    "urn:ngsi-ld:QueueMonitor:items:JTAO:46330396"  
-  ],  
-  "seeAlso": [  
-    "urn:ngsi-ld:QueueMonitor:items:SHMV:05050086",  
-    "urn:ngsi-ld:QueueMonitor:items:QQJP:06476874"  
-  ],  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      42.605556,  
-      -5.57  
+    "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
+    "type": "QueueMonitor",  
+    "address": {  
+        "streetAddress": "Plaza de la Catedral s/n",  
+        "addressLocality": "Leon",  
+        "addressRegion": "Castilla y Leon",  
+        "addressCountry": "Spain",  
+        "postalCode": "24001",  
+        "postOfficeBoxNumber": "",  
+        "areaServed": "City Center."  
+    },  
+    "alternateName": "Cathedral queue",  
+    "areaServed": "City Center",  
+    "dataProvider": "",  
+    "dateCreated": "2021-03-22T11:10:04Z",  
+    "dateModified": "2021-03-22T11:10:05Z",  
+    "description": "Queue system of the tourist attraction of Leon Cathedral for allowing a limited visitors inside the building",  
+    "lastTicketIssued": 33,  
+    "lastTicketIssuedLabel": "C-33",  
+    "linePriority": 1,  
+    "localId": "system-1",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            42.605556,  
+            -5.57  
+        ]  
+    },  
+    "name": "Queue system of the tourist attraction of Leon Cathedral",  
+    "officeName": "Tourist Office",  
+    "owner": [  
+        "urn:ngsi-ld:QueueMonitor:items:TLDV:47467690",  
+        "urn:ngsi-ld:QueueMonitor:items:JTAO:46330396"  
+    ],  
+    "queueLine": "Groups line.",  
+    "scheduleTime": "2021-02-21T12:47:04Z",  
+    "seeAlso": [  
+        "urn:ngsi-ld:QueueMonitor:items:SHMV:05050086",  
+        "urn:ngsi-ld:QueueMonitor:items:QQJP:06476874"  
+    ],  
+    "serviceId": "Cathedral-reservations-visit-1",  
+    "serviceName": "Visit reservations.",  
+    "serviceStatus": "Open",  
+    "serviceStatusNote": "",  
+    "source": "",  
+    "ticketServed": 45,  
+    "ticketServedLabel": "C-45",  
+    "ticketsToServe": 12,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.QueueManagement/master/context.jsonld"  
     ]  
-  },  
-  "address": {  
-    "streetAddress": "Plaza de la Catedral s/n",  
-    "addressLocality": "Leon",  
-    "addressRegion": "Castilla y Leon",  
-    "addressCountry": "Spain",  
-    "postalCode": "24001",  
-    "postOfficeBoxNumber": "",  
-    "areaServed": "City Center."  
-  },  
-  "areaServed": "City Center",  
-  "localId": "system-1",  
-  "officeName": "Tourist Office",  
-  "serviceName": "Visit reservations.",  
-  "serviceId": "Cathedral-reservations-visit-1",  
-  "serviceStatus": "Open",  
-  "serviceStatusNote": "",  
-  "scheduleTime": "2021-02-21T12:47:04Z",  
-  "queueLine": "Groups line.",  
-  "linePriority": 1,  
-  "lastTicketIssued": 33,  
-  "lastTicketIssuedLabel": "C-33",  
-  "ticketServed": 45,  
-  "ticketServedLabel": "C-45",  
-  "ticketsToServe": 12,  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-#### QueueMonitor NGSI-LDの正規化例  
-正規化されたJSON-LD形式のQueueMonitorの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### QueueMonitor NGSI-LD 正規化例  
+以下は、正規化されたJSON-LD形式のQueueMonitorの例である。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
-  "type": "QueueMonitor",  
-  "dateCreated": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-03-22T11:10:04Z"  
-    }  
-  },  
-  "dateModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-03-22T11:10:05Z"  
-    }  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Queue system of the tourist attraction of Leon Cathedral"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Cathedral queue"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Queue system of the tourist attraction of Leon Cathedral for allowing a limited visitors inside the building"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "owner": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:QueueMonitor:items:TLDV:47467690",  
-      "urn:ngsi-ld:QueueMonitor:items:JTAO:46330396"  
+    "id": "urn:ngsi-ld:QueueMonitor:id:SIHJ:22618237",  
+    "type": "QueueMonitor",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "streetAddress": "Plaza de la Catedrla s/n",  
+            "addressLocality": "Leon",  
+            "addressRegion": "Castilla y Leon",  
+            "addressCountry": "Spain",  
+            "postalCode": "24001",  
+            "postOfficeBoxNumber": "",  
+            "areaServed": "City Center."  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Cathedral queue"  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "City Center"  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-22T11:10:04Z"  
+        }  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-22T11:10:05Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Queue system of the tourist attraction of Leon Cathedral for allowing a limited visitors inside the building"  
+    },  
+    "lastTicketIssued": {  
+        "type": "Property",  
+        "value": 33  
+    },  
+    "lastTicketIssuedLabel": {  
+        "type": "Property",  
+        "value": "C-33"  
+    },  
+    "linePriority": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "localId": {  
+        "type": "Property",  
+        "value": "system-1"  
+    },  
+    "location": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                42.605556,  
+                -5.57  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Queue system of the tourist attraction of Leon Cathedral"  
+    },  
+    "officeName": {  
+        "type": "Property",  
+        "value": "Tourist Office"  
+    },  
+    "owner": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:QueueMonitor:items:TLDV:47467690",  
+            "urn:ngsi-ld:QueueMonitor:items:JTAO:46330396"  
+        ]  
+    },  
+    "queueLine": {  
+        "type": "Property",  
+        "value": "Groups line."  
+    },  
+    "scheduleTime": {  
+        "type": "Property",  
+        "value": "2021-02-21T12:47:04Z"  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:QueueMonitor:items:SHMV:05050086",  
+            "urn:ngsi-ld:QueueMonitor:items:QQJP:06476874"  
+        ]  
+    },  
+    "serviceId": {  
+        "type": "Property",  
+        "value": "Cathedral-reservations-visit-1"  
+    },  
+    "serviceName": {  
+        "type": "Property",  
+        "value": "Visit reservations."  
+    },  
+    "serviceStatus": {  
+        "type": "Property",  
+        "value": "Open"  
+    },  
+    "serviceStatusNote": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "ticketServed": {  
+        "type": "Property",  
+        "value": 45  
+    },  
+    "ticketServedLabel": {  
+        "type": "Property",  
+        "value": "C-45"  
+    },  
+    "ticketsToServe": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.QueueManagement/master/context.jsonld"  
     ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:QueueMonitor:items:SHMV:05050086",  
-      "urn:ngsi-ld:QueueMonitor:items:QQJP:06476874"  
-    ]  
-  },  
-  "location": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        42.605556,  
-        -5.57  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "streetAddress": "Plaza de la Catedrla s/n",  
-      "addressLocality": "Leon",  
-      "addressRegion": "Castilla y Leon",  
-      "addressCountry": "Spain",  
-      "postalCode": "24001",  
-      "postOfficeBoxNumber": "",  
-      "areaServed": "City Center."  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "City Center"  
-  },  
-  "localId": {  
-    "type": "Property",  
-    "value": "system-1"  
-  },  
-  "officeName": {  
-    "type": "Property",  
-    "value": "Tourist Office"  
-  },  
-  "serviceName": {  
-    "type": "Property",  
-    "value": "Visit reservations."  
-  },  
-  "serviceId": {  
-    "type": "Property",  
-    "value": "Cathedral-reservations-visit-1"  
-  },  
-  "serviceStatus": {  
-    "type": "Property",  
-    "value": "Open"  
-  },  
-  "serviceStatusNote": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "scheduleTime": {  
-    "type": "Property",  
-    "value": "2021-02-21T12:47:04Z"  
-  },  
-  "queueLine": {  
-    "type": "Property",  
-    "value": "Groups line."  
-  },  
-  "linePriority": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "lastTicketIssued": {  
-    "type": "Property",  
-    "value": 33  
-  },  
-  "lastTicketIssuedLabel": {  
-    "type": "Property",  
-    "value": "C-33"  
-  },  
-  "ticketServed": {  
-    "type": "Property",  
-    "value": 45  
-  },  
-  "ticketServedLabel": {  
-    "type": "Property",  
-    "value": "C-45"  
-  },  
-  "ticketsToServe": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
