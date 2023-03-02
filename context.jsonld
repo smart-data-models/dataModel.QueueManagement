@@ -1,5 +1,6 @@
 {
     "@context": {
+        "QueueMonitor": "https://smartdatamodels.org/dataModel.QueueManagement/QueueMonitor",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
