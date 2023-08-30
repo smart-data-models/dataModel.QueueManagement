@@ -20,11 +20,11 @@
                     "enum": [
                         "QueueMonitor"
                     ],
-                    "description": "Property. NGSI Entity type. It has to be QueueMonitor."
+                    "description": "Property. NGSI Entity type. It has to be QueueMonitor"
                 },
                 "localId": {
                     "type": "string",
-                    "description": "Property. Unique identifier from the source data set."
+                    "description": "Property. Unique identifier from the source data set"
                 },
                 "officeName": {
                     "type": "string",
