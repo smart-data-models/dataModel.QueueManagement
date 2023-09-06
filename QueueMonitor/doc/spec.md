@@ -15,7 +15,14 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `lastTicketIssued[integer]`: Last ticket number issued or this line at Counter Queue  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `lastTicketIssuedLabel[string]`: Label associated to the lastTicketIssued  . Model: [https://schema.org/Text](https://schema.org/Text)- `linePriority[integer]`: Level of priority of this line at Counter Queue  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `localId[string]`: Unique identifier from the source data set.  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `officeName[string]`:  name of the service provided at the counter  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `queueLine[string]`: Description about the queue line associated to the service. The same office counter could serve different queue lines with different priority level  . Model: [https://schema.org/Text](https://schema.org/Text)- `scheduleTime[string]`: Scheduled working time of the service  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `serviceId[string]`: Id of the service provided at the counter. The same service could be provided by many offices  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceName[string]`: Unique identifier from the source data set  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceStatus[string]`: Status of the service at timestamp time. Enum:'Closed, Open, Suspended'  - `serviceStatusNote[string]`: Additional note to the service status  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `ticketServed[integer]`: Ticket number currently served by this line at Counter Queue  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `ticketServedLabel[string]`: Identifier (unique) from the source data set  . Model: [https://schema.org/Text](https://schema.org/Text)- `ticketsToServe[integer]`: Tickets left to serve as ticketIssued minus lastTicketServed  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entity type. It has to be QueueMonitor.  <!-- /30-PropertiesList -->  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
+	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `lastTicketIssued[number]`: Last ticket number issued or this line at Counter Queue  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `lastTicketIssuedLabel[string]`: Label associated to the lastTicketIssued  . Model: [https://schema.org/Text](https://schema.org/Text)- `linePriority[number]`: Level of priority of this line at Counter Queue  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `localId[string]`: Unique identifier from the source data set  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `officeName[string]`:  name of the service provided at the counter  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `queueLine[string]`: Description about the queue line associated to the service. The same office counter could serve different queue lines with different priority level  . Model: [https://schema.org/Text](https://schema.org/Text)- `scheduleTime[date-time]`: Scheduled working time of the service  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `serviceId[string]`: Id of the service provided at the counter. The same service could be provided by many offices  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceName[string]`: Unique identifier from the source data set  . Model: [https://schema.org/Text](https://schema.org/Text)- `serviceStatus[string]`: Status of the service at timestamp time. Enum:'Closed, Open, Suspended'  - `serviceStatusNote[string]`: Additional note to the service status  . Model: [https://schema.org/Text](https://schema.org/Text)- `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `ticketServed[number]`: Ticket number currently served by this line at Counter Queue  . Model: [https://schema.org/Integer](https://schema.org/Integer)- `ticketServedLabel[string]`: Identifier (unique) from the source data set  . Model: [https://schema.org/Text](https://schema.org/Text)- `ticketsToServe[number]`: Tickets left to serve as ticketIssued minus lastTicketServed  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI Entity type. It has to be QueueMonitor  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,106 +37,138 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 QueueMonitor:    
-  description: 'An office counter queue system on a daily run. First Version from synchronicity project'    
+  description: An office counter queue system on a daily run. First Version from synchronicity project    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &queuemonitor_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     lastTicketIssued:    
-      description: 'Last ticket number issued or this line at Counter Queue'    
-      type: integer    
+      description: Last ticket number issued or this line at Counter Queue    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Integer    
         type: Property    
     lastTicketIssuedLabel:    
-      description: 'Label associated to the lastTicketIssued'    
+      description: Label associated to the lastTicketIssued    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     linePriority:    
-      description: 'Level of priority of this line at Counter Queue'    
-      type: integer    
+      description: Level of priority of this line at Counter Queue    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Integer    
         type: Property    
     localId:    
-      description: 'Unique identifier from the source data set.'    
+      description: Unique identifier from the source data set    
       type: string    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -148,9 +187,11 @@ QueueMonitor:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -172,9 +213,11 @@ QueueMonitor:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -198,9 +241,11 @@ QueueMonitor:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -221,9 +266,11 @@ QueueMonitor:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -247,9 +294,11 @@ QueueMonitor:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -275,12 +324,14 @@ QueueMonitor:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -291,28 +342,42 @@ QueueMonitor:
         model: https://schema.org/Text    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *queuemonitor_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     queueLine:    
-      description: 'Description about the queue line associated to the service. The same office counter could serve different queue lines with different priority level'    
+      description: Description about the queue line associated to the service. The same office counter could serve different queue lines with different priority level    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     scheduleTime:    
-      description: 'Scheduled working time of the service'    
+      description: Scheduled working time of the service    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -324,13 +389,13 @@ QueueMonitor:
       x-ngsi:    
         type: Property    
     serviceId:    
-      description: 'Id of the service provided at the counter. The same service could be provided by many offices'    
+      description: Id of the service provided at the counter. The same service could be provided by many offices    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     serviceName:    
-      description: 'Unique identifier from the source data set'    
+      description: Unique identifier from the source data set    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -345,36 +410,36 @@ QueueMonitor:
       x-ngsi:    
         type: Property    
     serviceStatusNote:    
-      description: 'Additional note to the service status'    
+      description: Additional note to the service status    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     ticketServed:    
-      description: 'Ticket number currently served by this line at Counter Queue'    
-      type: integer    
+      description: Ticket number currently served by this line at Counter Queue    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Integer    
         type: Property    
     ticketServedLabel:    
-      description: 'Identifier (unique) from the source data set'    
+      description: Identifier (unique) from the source data set    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     ticketsToServe:    
-      description: 'Tickets left to serve as ticketIssued minus lastTicketServed'    
-      type: integer    
+      description: Tickets left to serve as ticketIssued minus lastTicketServed    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be QueueMonitor.'    
+      description: NGSI Entity type. It has to be QueueMonitor    
       enum:    
         - QueueMonitor    
       type: string    
@@ -385,7 +450,7 @@ QueueMonitor:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.QueueManagement/blob/master/QueueMonitor/LICENSE.md    
   x-model-schema: https://smart-data-models/dataModel.QueueManagement/QueueMonitor/schema.json    
   x-model-tags: ""    
