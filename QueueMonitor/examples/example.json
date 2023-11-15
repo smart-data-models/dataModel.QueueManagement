@@ -25,7 +25,7 @@
   },
   "address": {
     "streetAddress": "Plaza de la Catedral s/n",
-    "addressLocality": "León",
+    "addressLocality": "Le\u00f3n",
     "addressRegion": "Castilla y Leon",
     "addressCountry": "Spain",
     "postalCode": "24001",
@@ -48,4 +48,3 @@
   "ticketServedLabel": "C-45",
   "ticketsToServe": 12
 }
-
