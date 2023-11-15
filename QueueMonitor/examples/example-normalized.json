@@ -3,17 +3,11 @@
   "type": "QueueMonitor",
   "dateCreated": {
     "type": "DateTime",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-22T11:10:04Z"
-    }
+    "value": "2021-03-22T11:10:04Z"
   },
   "dateModified": {
     "type": "DateTime",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-22T11:10:05Z"
-    }
+    "value": "2021-03-22T11:10:05Z"
   },
   "source": {
     "type": "Text",
@@ -36,14 +30,14 @@
     "value": ""
   },
   "owner": {
-    "type": "Text",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:QueueMonitor:items:TLDV:47467690",
       "urn:ngsi-ld:QueueMonitor:items:JTAO:46330396"
     ]
   },
   "seeAlso": {
-    "type": "Text",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:QueueMonitor:items:SHMV:05050086",
       "urn:ngsi-ld:QueueMonitor:items:QQJP:06476874"
@@ -63,8 +57,8 @@
     "type": "StructuredValue",
     "value": {
       "streetAddress": "Plaza de la Catedrla s/n",
-      "addressLocality": "León",
-      "addressRegion": "Castilla y León",
+      "addressLocality": "Le\u00f3n",
+      "addressRegion": "Castilla y Le\u00f3n",
       "addressCountry": "Spain",
       "postalCode": "24001",
       "postOfficeBoxNumber": "",
@@ -108,8 +102,8 @@
     "value": "Groups line."
   },
   "linePriority": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "lastTicketIssued": {
     "type": "Number",
