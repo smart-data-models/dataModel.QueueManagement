@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "QueueMonitor"
 subject = "dataModel.QueueManagement"
-lastTicketIssued = {'type': 'Property', 'value': 33}
+lastTicketIssued = 33
 attribute = "lastTicketIssued"
 value = lastTicketIssued
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-lastTicketIssuedLabel = "{'type': 'Property', 'value': 'C-33'}"
+lastTicketIssuedLabel = "C-33"
 attribute = "lastTicketIssuedLabel"
 value = lastTicketIssuedLabel
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-linePriority = {'type': 'Property', 'value': 1}
+linePriority = 1
 attribute = "linePriority"
 value = linePriority
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-localId = "{'type': 'Property', 'value': 'system-1'}"
+localId = "system-1"
 attribute = "localId"
 value = localId
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
